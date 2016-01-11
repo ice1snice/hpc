@@ -1,9 +1,27 @@
 #pragma once
 
-vector<int> adj_cells_y = {0, 0, -1, -1 ,-1, 1, 1, 1};
-vector<int> adj_cells_x = {1, -1, -1, 0 , 1, -1, 0, 1};
+vector<int> adj_cells_y;
+vector<int> adj_cells_x;
 
 int calculate_one(int** field, int n, int m, int width) {
+    adj_cells_y.push_back(0);
+    adj_cells_y.push_back(0);
+    adj_cells_y.push_back(-1);
+    adj_cells_y.push_back(-1);
+    adj_cells_y.push_back(-1);
+    adj_cells_y.push_back(1);
+    adj_cells_y.push_back(1);
+    adj_cells_y.push_back(1);
+    adj_cells_x.push_back(1);
+    adj_cells_x.push_back(-1);
+    adj_cells_x.push_back(-1);
+    adj_cells_x.push_back(0);
+    adj_cells_x.push_back(1);
+    adj_cells_x.push_back(-1);
+    adj_cells_x.push_back(0);
+    adj_cells_x.push_back(1);
+
+
     int active_neighbour = 0;
     for (int i = 0; i < 8; i++) {
         
@@ -31,6 +49,22 @@ int calculate_one(int** field, int n, int m, int width) {
 }
 
 int calculate_one_vect(Field* field, int n, int m) {
+    adj_cells_y.push_back(0);
+    adj_cells_y.push_back(0);
+    adj_cells_y.push_back(-1);
+    adj_cells_y.push_back(-1);
+    adj_cells_y.push_back(-1);
+    adj_cells_y.push_back(1);
+    adj_cells_y.push_back(1);
+    adj_cells_y.push_back(1);
+    adj_cells_x.push_back(1);
+    adj_cells_x.push_back(-1);
+    adj_cells_x.push_back(-1);
+    adj_cells_x.push_back(0);
+    adj_cells_x.push_back(1);
+    adj_cells_x.push_back(-1);
+    adj_cells_x.push_back(0);
+    adj_cells_x.push_back(1);
     int active_neighbour = 0;
     for (int i = 0; i < 8; i++) {
         int i1 = n + adj_cells_y[i];

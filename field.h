@@ -12,8 +12,8 @@ public:
     Field(int n, int m);
     Field(string filename);
     friend ostream& operator<<(ostream& , Field&);
-    int width = 0;
-    int height = 0;
+    int width;
+    int height;
     vector<vector<int> > field;
 };
 
