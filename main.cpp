@@ -8,8 +8,8 @@
 #include <ctime>
 #include <sys/time.h>
 
-#define N 10000
-#define M 1000
+#define N 2000
+#define M 100
 #define number_of_steps 100
 
 using namespace std;
